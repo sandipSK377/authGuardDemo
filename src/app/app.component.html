@@ -1,0 +1,12 @@
+<div style="text-align: center;margin-top: 2em;">
+  <button [routerLink]="['']">Home</button>
+
+  <button [routerLink]="['/admin']" style="margin-left: 1em;">Admin</button>
+    <button [routerLink]="['/login']" style="margin-left: 5em;" *ngIf="loginStatus">Login</button>
+  <button type="button" (click)="logOut()" style="margin-left: 5em;" *ngIf="logoutStatus">Log out</button>
+</div>
+<br>
+<hr>
+<div style="text-align: center;">
+  <router-outlet></router-outlet>
+</div>

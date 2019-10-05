@@ -1,0 +1,15 @@
+<form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+  <input type="email" formControlName="email" placeholder="email"><br>
+  <span *ngIf="email.invalid && email.touched">
+    Your email does not look right
+</span>
+  <br>
+  <input type="password" formControlName="password" placeholder="password"><br>
+  <span *ngIf="password.invalid && password.touched">
+    That password sucks...
+</span>
+  <br>
+  <button type="submit">Login</button>
+</form>
+<br><br>
+<p>please use email: <strong>"abc@gmail.com"</strong> and password: <strong>"12345q"</strong></p>
